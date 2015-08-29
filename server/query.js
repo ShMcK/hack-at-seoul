@@ -13,5 +13,7 @@ Meteor.publish('query', function () {
 
 Query.before.insert(function(userId, doc) {
   var query = doc.query;
+  console.log('query', query);
+  console.log(Meteor.call('insertGiphy', query));
   // set query as first query
 });

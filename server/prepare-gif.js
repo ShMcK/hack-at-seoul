@@ -1,6 +1,6 @@
-Meteor.startup(function() {
+Meteor.startup(function () {
   return Meteor.methods({
-    removeAllGifs: function() {
+    removeAllGifs: function () {
       return GifList.remove({});
     }
   });
