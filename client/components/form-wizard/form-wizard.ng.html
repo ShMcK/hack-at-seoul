@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row">
+    <section>
+      <div class="wizard">
+        <form-wizard-icons></form-wizard-icons>
+
+        <!-- step 1 -->
+        <div class="tab-content">
+          <div class="tab-pane active" role="tabpanel" id="step1">
+            <presentation-type></presentation-type>
+            <div class="clearfix"></div>
+          </div>
+
+          <!-- step 2 -->
+          <div class="tab-pane" role="tabpanel" id="step2">
+
+            <h1>{{vm.gifs}}</h1>
+
+            <giphy-search gifs="vm.gifs"></giphy-search>
+
+            <giphy-image ng-repeat="gif in vm.gifs track by $index" gif="gif" index="{{$index + 1}}"></giphy-image>
+            <div class="clearfix"></div>
+          </div>
+
+          <!-- step 3 -->
+          <div class="tab-pane" role="tabpanel" id="step3">
+          <selected-gifs></selected-gifs>
+            <div class="clearfix"></div>
+          </div>
+
+          <!-- presentation -->
+          <div class="tab-pane" role="tabpanel" id="complete">
+            <presentation-view></presentation-view>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<section class="presentation-view">
+  <div class="container text-center">
+
+    <h1> Start Presentation </h1>
+    <!-- Large modal -->
+    <button class="btn btn-default" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
+
+    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+         aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+
+              <div class="item" ng-class="{'active': $index === vm.isCurrent}" ng-repeat="gif in vm.gifs">
+                <giphy-image gif="gif"></giphy-image>
+
+                <div class="carousel-caption">
+                  One Image
+                </div>
+              </div>
+
+              <!-- Controls -->
+              <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+              </a>
+              <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
