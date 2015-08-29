@@ -5,10 +5,10 @@ function presentationViewCtrl($meteor) {
   this.gifs = $meteor.collection(GifList).subscribe('gifList');
   this.prev = function() {
     this.isCurrent -= 1;
-  }
+  };
   this.next = function() {
     this.isCurrent += 1;
-  }
+  };
 }
 
 function presentationView() {
