@@ -15,11 +15,7 @@
             <div class="carousel-inner">
 
               <div class="item" ng-class="{'active': $index === vm.isCurrent}" ng-repeat="gif in vm.gifs">
-                <giphy-image gif="gif"></giphy-image>
-
-                <div class="carousel-caption">
-                  One Image
-                </div>
+                <giphy-presentation-image gif="gif.full"></giphy-presentation-image>
               </div>
 
               <!-- Controls -->

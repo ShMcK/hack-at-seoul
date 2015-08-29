@@ -35,9 +35,12 @@ function getTheme() {
 }
 
 function giphyFilter(gifs, size) {
+  console.log(gifs);
   var array = [];
   for (var i = 0; i < gifs.length; i++) {
-    array.push(gifs[i].images[size]);
+    var gif = gifs[i].images[size];
+    gif.full = gifs[i].images['original'];
+    array.push(gif);
   }
   return array;
 }

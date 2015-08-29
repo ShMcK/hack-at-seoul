@@ -9,6 +9,7 @@ function giphyImage() {
     controller: function (SlideService, $scope) {
       $scope.select = function (gif) {
         SlideService.addSlide(gif);
+
       }
     }
   };
