@@ -1,0 +1,12 @@
+.giphy-image {
+  display: inline-block;
+}
+
+.giphy-image img {
+  border: solid 2px black;
+  margin: 5px;
+}
+
+.giphy-image p {
+  text-align: center;
+}

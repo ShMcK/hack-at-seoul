@@ -3,8 +3,9 @@ Api = new Restivus({
   prettyJson: true
 });
 
-Api.addRoute('text', {authRequired: false}, {
-  post: {
-
+Api.addRoute('/query/:text', {
+  post: function () {
+    var query = this.urlParams.text;
+    console.log(query);
   }
 });

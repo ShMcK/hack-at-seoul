@@ -1,4 +1,4 @@
-function giphySearchCtrl(Giphy) {
+function giphySearchCtrl(Giphy, $scope, SlideService) {
   var vm = this;
   vm.gifQuery = '';
   vm.submit = function () {
@@ -8,6 +8,11 @@ function giphySearchCtrl(Giphy) {
       vm.gifs = data;
     });
   };
+  $scope.select = function (gif) {
+    console.log(gif);
+    console.log(vm.gifQuery);
+    SlideService.addSlide(gif, vm.gifQuery);
+  }
 }
 
 function giphySearch() {
