@@ -7,7 +7,7 @@
 
     <div id="search">
       <button type="button" class="close">×</button>
-      <form>
+      <form ng-submit="vm.submit()">
         <input type="search" ng-model="vm.gifQuery" placeholder="Search for image(s)"/>
         <button type="submit" class="btn btn-primary">Search</button>
       </form>

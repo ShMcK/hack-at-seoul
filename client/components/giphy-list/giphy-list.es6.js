@@ -1,6 +1,9 @@
 function giphyListCtrl($meteor) {
   var vm = this;
   vm.gifList = $meteor.collection(GifList).subscribe('gifList');
+  vm.saveNotes = function (gif) {
+    GifList.update(gif.id, {$set: {notes: gif.notes}});
+  }
 }
 
 function giphyList() {
