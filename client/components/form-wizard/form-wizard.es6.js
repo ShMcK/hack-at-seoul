@@ -3,7 +3,6 @@ function formWizardCtrl(Giphy) {
   vm.gifQuery = '';
   vm.submit = function () {
     Giphy.getImage(vm.gifQuery, 4, 'fixed_width').then(function (data) {
-      console.log(data);
       vm.gifs = data;
     });
   };

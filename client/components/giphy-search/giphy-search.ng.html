@@ -1,23 +1,20 @@
-<form ng-submit="vm.submit()" novalidate>
-  <a href="#search">
-    <button class="btn btn-large btn-primary">Search</button>
-  </a>
+<div>
+  <form ng-submit="vm.submit()" novalidate>
+    <a href="#search">
+      <button class="btn btn-large btn-primary">Search</button>
+    </a>
 
 
-  <div id="search">
-    <button type="button" class="close">×</button>
-    <form>
-      <input type="search" ng-model="vm.gifQuery" placeholder="Search for image(s)"/>
-      <button type="submit" class="btn btn-primary">Search</button>
-    </form>
-  </div>
-</form>
+    <div id="search">
+      <button type="button" class="close">×</button>
+      <form>
+        <input type="search" ng-model="vm.gifQuery" placeholder="Search for image(s)"/>
+        <button type="submit" class="btn btn-primary">Search</button>
+      </form>
+    </div>
+  </form>
 
-<div class="giphy-image col-md-6" >
-  <img ng-src="{{gif.url}}" ng-click="select(gif)"
-       ng-style="{'width':gif.width, 'height':gif.height, 'frameBorder':'0'}">
 
-  <p ng-if="index">{{index}}</p>
+  <giphy-image ng-repeat="gif in vm.gifs track by $index"
+               gif="gif" index="{{index + 1}}" query="vm.gifQuery"></giphy-image>
 </div>
-
-

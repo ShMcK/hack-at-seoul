@@ -5,10 +5,11 @@ function giphyImage() {
     scope: {
       gif: '=',
       index: '@',
+      query: '='
     },
     controller: function (SlideService, $scope) {
       $scope.select = function (gif) {
-        console.log(gif);
+        SlideService.addSlide(gif, $scope.query)
       }
     }
   };

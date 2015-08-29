@@ -1,3 +1,3 @@
-RTList = new Meteor.Collection();
+RTGif = new Meteor.Collection('rt-gif');
 
-GifList = new Meteor.Collection('gif-list');
+PrepareGif = new Meteor.Collection('gif-list');
