@@ -1,7 +1,8 @@
 angular.module('app').directive('rtPresentationView', rtPresentationView);
 
-function rtPresentationViewCtrl() {
-  this.gif = {};
+function rtPresentationViewCtrl($meteor) {
+  var vm = this;
+  vm.gifs = $meteor.collection(RTGif, true).subscribe('rtGif');
 }
 
 function rtPresentationView() {

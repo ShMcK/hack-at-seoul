@@ -9,8 +9,7 @@ Meteor.call('removeAllGifs');
  */
 angular.module('app', [
   /* third party */
-  'angular-meteor',
-  'btford.socket-io'
+  'angular-meteor'
 ]);
 
 /**

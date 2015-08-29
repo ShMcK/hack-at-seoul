@@ -9,7 +9,6 @@ function giphyImage() {
     },
     controller: function (SlideService, $scope) {
       this.select = function (gif) {
-        alert(gif.url);
         SlideService.addSlide(gif, $scope.query)
       }
     }

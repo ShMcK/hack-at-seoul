@@ -37,6 +37,7 @@ function getTheme() {
 function giphyFilter(gifs, size) {
   console.log('filter');
   var gif = gifs.data[0].images[size];
+  gif.date_created = Date.now();
   console.log(gif);
   return gif;
 }
