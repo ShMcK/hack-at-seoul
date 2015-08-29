@@ -5,7 +5,7 @@ function giphySearchCtrl(Giphy, $scope, SlideService) {
     console.log('submit');
     Giphy.getImage(vm.gifQuery, 4, 'fixed_width').then(function (data) {
       console.log('search data', data);
-      vm.gifs = data;
+      vm.searchGifs = data;
     });
   };
   $scope.select = function (gif) {

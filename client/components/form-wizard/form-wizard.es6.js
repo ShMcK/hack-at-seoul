@@ -1,5 +1,6 @@
-function formWizardCtrl(Giphy) {
+function formWizardCtrl(Giphy, SettingsService) {
   var vm = this;
+  vm.settings = SettingsService;
   vm.gifQuery = '';
   vm.submit = function () {
     Giphy.getImage(vm.gifQuery, 4, 'fixed_width').then(function (data) {

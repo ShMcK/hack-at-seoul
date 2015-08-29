@@ -14,6 +14,6 @@
     </div>
   </form>
 
-  <giphy-image ng-repeat="gif in vm.gifs track by $index"
+  <giphy-image ng-repeat="gif in vm.searchGifs track by $index"
                gif="gif" index="{{index + 1}}" query="vm.gifQuery"></giphy-image>
 </div>

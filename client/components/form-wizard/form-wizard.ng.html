@@ -21,13 +21,14 @@
 
           <!-- step 3 -->
           <div class="tab-pane" role="tabpanel" id="step3">
-          <giphy-list></giphy-list>
+            <giphy-list></giphy-list>
             <div class="clearfix"></div>
           </div>
 
           <!-- presentation -->
           <div class="tab-pane" role="tabpanel" id="complete">
-            <presentation-view></presentation-view>
+            <rt-presentation-view ng-if="vm.settings.presentationType === 'real-time'"></rt-presentation-view>
+            <presentation-view ng-if="vm.settings.presentationType === 'prepare'"></presentation-view>
           </div>
           <div class="clearfix"></div>
         </div>
