@@ -9,6 +9,11 @@ function presentationViewCtrl($meteor) {
   this.next = function() {
     this.isCurrent += 1;
   };
+  this.events = $meteor.subscribe('events', {
+    msg: function (data) {
+      console.log(data);
+    }
+  });
 }
 
 function presentationView() {
