@@ -1,0 +1,7 @@
+.product-chooser-item {
+  margin: 20px;
+}
+
+.selected {
+  border: solid 2px grey;
+}

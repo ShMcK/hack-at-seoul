@@ -1,11 +1,10 @@
-angular.module('app').directive('presentationType', presentationType);
-
-function presentationTypeCtrl() {
+function presentationTypeCtrl(SettingsService) {
   var vm = this;
-  vm.type = 'real-time';
-  vm.select = function(type) {
+  vm.settings = SettingsService;
+  console.log(vm.settings);
+  vm.select = function (type) {
     console.log(type);
-    vm.type = type;
+    SettingsService.presentationType = type;
   }
 }
 
@@ -13,6 +12,9 @@ function presentationType() {
   return {
     templateUrl: 'client/components/presentation-type/presentation-type.ng.html',
     controller: presentationTypeCtrl,
-    controllerAs: 'ptype'
+    controllerAs: 'p'
   };
 }
+
+angular.module('app').directive('presentationType', presentationType);
+

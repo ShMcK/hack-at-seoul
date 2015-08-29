@@ -4,12 +4,12 @@ function giphyImage() {
     controllerAs: 'vm',
     scope: {
       gif: '=',
-      index: '@'
+      index: '@',
+      query: '@'
     },
     controller: function (SlideService, $scope) {
       $scope.select = function (gif) {
-        SlideService.addSlide(gif);
-
+        SlideService.addSlide(gif, $scope.query);
       }
     }
   };

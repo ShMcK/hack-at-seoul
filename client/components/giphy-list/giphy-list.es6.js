@@ -1,7 +1,11 @@
 function giphyListCtrl(SlideService) {
   var vm = this;
   this.gifs = SlideService.slides;
-  console.log(gifs);
+
+  vm.test = function () {
+    console.log(SlideService.slides);
+    console.log(this.gifs);
+  }
 }
 
 function giphyList() {
