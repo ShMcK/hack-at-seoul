@@ -9,4 +9,4 @@ insecure
 urigo:angular
 twbs:bootstrap
 urigo:angular-ui-router
-simple:rest
+#simple:rest

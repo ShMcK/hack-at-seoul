@@ -1,11 +1,13 @@
 function SlideService() {
-  this.slides = [];
+  //this.slides = [];
   this.addSlide = function (slide, query) {
-    var slide = slide;
+    alert(slide);
+    alert(query);
     slide.title = query;
-    console.log('slide');
     console.log(slide);
-    this.slides.push(slide);
+    //this.slides.push(slide);
+    delete slide.$$hashKey;
+    GifList.insert(slide);
   };
 }
 

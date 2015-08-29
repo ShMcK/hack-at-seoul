@@ -1,3 +1,3 @@
-Meteor.publish('rt-gif', function () {
+Meteor.publish('rtGif', function () {
   return RTGif.find();
 });

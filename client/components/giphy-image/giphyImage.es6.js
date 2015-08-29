@@ -8,7 +8,8 @@ function giphyImage() {
       query: '='
     },
     controller: function (SlideService, $scope) {
-      $scope.select = function (gif) {
+      this.select = function (gif) {
+        alert(gif.url);
         SlideService.addSlide(gif, $scope.query)
       }
     }

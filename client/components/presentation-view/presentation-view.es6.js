@@ -1,8 +1,8 @@
 angular.module('app').directive('presentationView', presentationView);
 
-function presentationViewCtrl(SlideService) {
+function presentationViewCtrl($meteor) {
   this.isCurrent = 0;
-  this.gifs = SlideService.slides;
+  this.gifs = $meteor.collection(GifList).subscribe('gifList');
   this.prev = function() {
     this.isCurrent -= 1;
   }

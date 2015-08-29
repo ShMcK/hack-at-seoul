@@ -1,18 +1,13 @@
-function giphyListCtrl(SlideService) {
+function giphyListCtrl($meteor) {
   var vm = this;
-  this.gifs = SlideService.slides;
-
-  vm.test = function () {
-    console.log(SlideService.slides);
-    console.log(this.gifs);
-  }
+  vm.gifList = $meteor.collection(GifList).subscribe('gifList');
 }
 
 function giphyList() {
   return {
     templateUrl: 'client/components/giphy-list/giphy-list.ng.html',
     controller: giphyListCtrl,
-    controllerAs: 'vm'
+    controllerAs: 'gl'
   };
 }
 

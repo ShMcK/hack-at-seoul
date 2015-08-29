@@ -1,3 +1,3 @@
-Meteor.publish('gif-list', function () {
+Meteor.publish('gifList', function () {
   return GifList.find();
 });
