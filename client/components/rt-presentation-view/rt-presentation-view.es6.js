@@ -1,13 +1,7 @@
 angular.module('app').directive('rtPresentationView', rtPresentationView);
 
-function rtPresentationViewCtrl($meteor) {
+function rtPresentationViewCtrl() {
   this.gif = {};
-  this.exit = function () {
-    // exit
-  };
-
-  this.query = $meteor.collection(Query).subscribe('query');
-  this.events = $meteor.collection(Events).subscribe('events');
 }
 
 function rtPresentationView() {

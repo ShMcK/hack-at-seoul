@@ -1,9 +1,7 @@
 function presentationTypeCtrl(SettingsService) {
   var vm = this;
   vm.settings = SettingsService;
-  console.log(vm.settings);
   vm.select = function (type) {
-    console.log(type);
     SettingsService.presentationType = type;
   }
 }

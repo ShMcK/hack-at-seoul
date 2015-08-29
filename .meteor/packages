@@ -6,7 +6,11 @@
 
 meteor-platform
 insecure
+autopublish
 urigo:angular
 twbs:bootstrap
 urigo:angular-ui-router
 #simple:rest
+mquandalle:bower
+joncursi:socket-io-client
+matb33:collection-hooks

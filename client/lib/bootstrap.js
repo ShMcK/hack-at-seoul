@@ -1,12 +1,16 @@
 'use strict';
 
+Meteor.call('removeAllEvents');
+Meteor.call('removeAllQueries');
+Meteor.call('removeAllGifs');
+
 /**
  *  App Module
  */
 angular.module('app', [
   /* third party */
   'angular-meteor',
-  'ui.router'
+  'btford.socket-io'
 ]);
 
 /**
