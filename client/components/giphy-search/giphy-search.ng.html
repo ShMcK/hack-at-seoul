@@ -1,4 +1,16 @@
 <form ng-submit="vm.submit()" novalidate>
-  <input type="text" ng-model="vm.gifQuery"/>
-  <button type="submit">Find</button>
+  <a href="#search">
+    <button class="btn btn-large btn-primary">Search</button>
+  </a>
+
+
+  <div id="search">
+    <button type="button" class="close">×</button>
+    <form>
+      <input type="search" ng-model="vm.gifQuery" placeholder="Search for image(s)"/>
+      <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+  </div>
 </form>
+
+

@@ -14,8 +14,6 @@
           <!-- step 2 -->
           <div class="tab-pane" role="tabpanel" id="step2">
 
-            <h1>{{vm.gifs}}</h1>
-
             <giphy-search gifs="vm.gifs"></giphy-search>
 
             <giphy-image ng-repeat="gif in vm.gifs track by $index" gif="gif" index="{{$index + 1}}"></giphy-image>
