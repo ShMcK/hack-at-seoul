@@ -14,5 +14,4 @@ Meteor.publish('events', function () {
 Events.before.insert(function(userId, doc) {
   var event = doc.event;
   // event code
-
 });

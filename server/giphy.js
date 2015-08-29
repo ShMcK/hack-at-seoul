@@ -35,9 +35,9 @@ function getTheme() {
 }
 
 function giphyFilter(gifs, size) {
-  console.log(gifs);
-  var gif = gifs[0].images[size];
-  gif.full = gifs[0].images['original'];
+  console.log('filter');
+  var gif = gifs.data[0].images[size];
+  console.log(gif);
   return gif;
 }
 
@@ -48,13 +48,13 @@ Meteor.methods({
     });
   },
   insertGiphy: function (query, limit, size) {
-    var limit = limit || 1;
-    var size = size || 'original';
+    limit = limit || 1;
+    size = size || 'original';
     var apiPath = getApiCall(query, limit);
     HTTP.get(apiPath, function (error, result) {
       if (error) {
         console.error('Error fetching result from Giphy');
-        return error
+        return error;
       } else {
         // success
         RTGif.insert(giphyFilter(result.data, size));

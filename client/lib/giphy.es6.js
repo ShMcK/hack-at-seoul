@@ -52,8 +52,8 @@ function Giphy($q, $http) {
     });
   };
   this.getImage = function (query, limit, size) {
-    var limit = limit || 1;
-    var size = size || 'original';
+    limit = limit || 1;
+    size = size || 'original';
     var apiPath = getApiCall(query, limit);
     var deferred = $q.defer();
     $http.get(apiPath)
