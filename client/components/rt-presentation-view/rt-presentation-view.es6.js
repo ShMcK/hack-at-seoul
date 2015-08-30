@@ -5,10 +5,26 @@ function rtPresentationViewCtrl($meteor, socket) {
   console.log(socket);
 
   socket.onmessage = function(evt) {
-    var query = JSON.parse(evt.data);
-    if (query) {
-      Meteor.call('insertGiphy', query.query);
+    console.log('socket: ', evt.data);
+    var received = JSON.parse(evt.data);
+    if (received.query) {
+      Meteor.call('insertGiphy', received.query);
     }
+
+    switch (received) {
+      case 'left':
+        //
+        break;
+      case 'right':
+        //
+        break;
+      case 'ok':
+        //
+        break;
+      default:
+        console.log(received);
+    }
+
   };
 
   $meteor.subscribe('rtGif');

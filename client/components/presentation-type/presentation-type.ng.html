@@ -3,8 +3,9 @@
 
   <div class="row form-group product-chooser">
 
-    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" ng-click="p.select('real-time')" ng-class="{'selected': p.settings.presentationType === 'real-time'}">
-      <div class="product-chooser-item" >
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" ng-click="p.select('real-time')"
+         ng-class="{'selected': p.settings.presentationType === 'real-time'}">
+      <div class="product-chooser-item">
         <img src="/images/start-now.jpg" class="img-rounded col-xs-4 col-sm-4 col-md-12 col-lg-12"
              alt="Mobile and Desktop">
 
@@ -16,7 +17,8 @@
       </div>
     </div>
 
-    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" ng-click="p.select('prepare')" ng-class="{'selected': p.settings.presentationType === 'prepare'}">
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" ng-click="p.select('prepare')"
+         ng-class="{'selected': p.settings.presentationType === 'prepare'}">
       <div class="product-chooser-item">
         <img src="/images/prepare.jpg" class="img-rounded col-xs-4 col-sm-4 col-md-12 col-lg-12" alt="Desktop">
 
@@ -31,29 +33,59 @@
 
   <br>
 
-  <h2>Theme</h2>
-  <form name="theme" ng-submit="p.selectTheme()">
-    <label>
-      <input type="radio" ng-model="p.theme" value="">
-      None
-    </label><br/>
-    <label>
-      <input type="radio" ng-model="p.theme" value="The Simpsons">
-      The Simpsons
-    </label><br/>
-    <label>
-      <input type="radio" ng-model="p.theme" value="Anime">
-      Anime
-    </label><br/>
-    <label>
-      <input type="radio" ng-model="p.theme" value="Animals">
-      Animals
-    </label><br/>
-    <label>
-      <input type="radio" ng-model="p.theme" value="reactions">
-      Reactions
-    </label>
-    <button type="submit" class="btn btn-secondary">Choose Theme</button>
-  </form>
+  <section>
 
+    <form name="theme" ng-submit="p.selectTheme()" class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+      <h3>Theme</h3>
+      <label>
+        <input type="radio" ng-model="p.theme" value="">
+        None
+      </label><br/>
+      <label>
+        <input type="radio" ng-model="p.theme" value="The Simpsons">
+        The Simpsons
+      </label><br/>
+      <label>
+        <input type="radio" ng-model="p.theme" value="Anime">
+        Anime
+      </label><br/>
+      <label>
+        <input type="radio" ng-model="p.theme" value="Animals">
+        Animals
+      </label><br/>
+      <label>
+        <input type="radio" ng-model="p.theme" value="reactions">
+        Reactions
+      </label>
+      <br>
+      <button type="submit" class="btn btn-secondary">Choose Theme</button>
+    </form>
+
+    <!--<form name="rating" ng-submit="p.selectRating()" class="col-xs-12 col-sm-12 col-md-4 col-lg-4">-->
+      <!--<h3>Rating</h3>-->
+      <!--<label>-->
+        <!--<input type="radio" ng-model="p.rating" value="y">-->
+        <!--Y-->
+      <!--</label><br/>-->
+      <!--<label>-->
+        <!--<input type="radio" ng-model="p.rating" value="g">-->
+        <!--G-->
+      <!--</label><br/>-->
+      <!--<label>-->
+        <!--<input type="radio" ng-model="p.rating" value="pg">-->
+        <!--PG-->
+      <!--</label><br/>-->
+      <!--<label>-->
+        <!--<input type="radio" ng-model="p.rating" value="pg-13">-->
+        <!--PG-13-->
+      <!--</label><br/>-->
+      <!--<label>-->
+        <!--<input type="radio" ng-model="p.rating" value="r">-->
+        <!--R-->
+      <!--</label>-->
+      <!--<br>-->
+      <!--<button type="submit" class="btn btn-secondary">Choose Rating</button>-->
+    <!--</form>-->
+
+  </section>
 </div>

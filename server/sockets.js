@@ -14,10 +14,7 @@
 //    console.log('received: %s', message);
 //  });
 //  ws.send('Connected');
-//  setInterval(function () {
-//    console.log('send');
-//    ws.send(JSON.stringify({query: 'test'}));
-//  }, 5000);
+
 //
 //
 //  ws.onerror = function (event) {

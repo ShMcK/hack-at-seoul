@@ -7,7 +7,11 @@ function presentationTypeCtrl(SettingsService) {
   vm.theme = '';
   vm.selectTheme = function() {
     Meteor.call('setSettings', {useTheme: true, theme: vm.theme});
-  }
+  };
+  vm.rating = 'pg-13';
+  vm.selectRating = function() {
+    Meteor.call('setSettings', {useRating: true, rating: vm.rating});
+  };
 }
 
 function presentationType() {

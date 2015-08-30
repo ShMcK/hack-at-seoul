@@ -10,12 +10,13 @@ function socket($rootScope) {
     ws.onopen = function () {
       console.log('socket open');
     };
-    //ws.onmessage = function(evt) {
-    //  console.log(evt.data);
-    //};
+
     ws.onclose = function () {
       console.log('socket closed');
     };
+      ws.onerror = function (error) {
+        console.log('error');
+      }
     return ws;
 
 
