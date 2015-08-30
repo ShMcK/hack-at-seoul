@@ -2,6 +2,7 @@
 Meteor.startup(function() {
   return Meteor.methods({
     removeAllQueries: function() {
+      console.log('clear rt');
       return Query.remove({});
     }
   });

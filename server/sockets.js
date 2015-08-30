@@ -1,4 +1,4 @@
-var WebSocket = Meteor.npmRequire('ws');
+var WebSocket = Meteor.npmRequire('ws').Server;
 
 var USING_SHARED_PROTOCOL = false;
 
@@ -7,15 +7,25 @@ if (USING_SHARED_PROTOCOL) {
   // Shared Protocol
 
   var ws = new WebSocket('ws://192.168.0.69:9090');
-  ws.on('open', function open() {
-    ws.send('Open for bidniz');
+  ws.on('connection', function (ws) {
+    console.log('socket connected');
   });
-  ws.on('message', function (data, flags) {
+  ws.on('message', function (message) {
+    console.log('received: %s', message);
+  });
+  ws.send('Connected');
+  setInterval(function () {
+    console.log('send');
+    ws.send(JSON.stringify({query: 'test'}));
+  }, 5000);
 
-  });
+
   ws.onerror = function (event) {
+    console.log(event);
     console.log('ws error');
   }
+
+
 } else {
 
   // Socket.io
