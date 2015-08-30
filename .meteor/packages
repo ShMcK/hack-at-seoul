@@ -12,8 +12,5 @@ twbs:bootstrap
 joncursi:socket-io-client
 matb33:collection-hooks
 http
-meteorhacks:npm
 
-npm-container
 nimble:restivus
-jantimon:gpio
