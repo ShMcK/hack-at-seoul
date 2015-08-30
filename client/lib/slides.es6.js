@@ -1,8 +1,6 @@
 function SlideService() {
   //this.slides = [];
   this.addSlide = function (slide, query) {
-    alert(slide);
-    alert(query);
     slide.title = query;
     slide.notes = '';
     console.log(slide);

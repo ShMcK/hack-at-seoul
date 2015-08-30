@@ -6,7 +6,6 @@
 
 meteor-platform
 insecure
-autopublish
 urigo:angular
 twbs:bootstrap
 joncursi:socket-io-client
