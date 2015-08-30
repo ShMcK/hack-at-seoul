@@ -4,9 +4,13 @@
 
 .giphy-image img {
   border: solid 2px black;
-  margin: 5px;
+  margin: 15px;
 }
 
 .giphy-image p {
   text-align: center;
+}
+
+.giphy-image .selected-image {
+  border: solid 5px yellow;
 }

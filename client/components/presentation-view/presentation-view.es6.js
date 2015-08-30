@@ -1,16 +1,21 @@
 angular.module('app').directive('presentationView', presentationView);
 
-function presentationViewCtrl($meteor, socket) {
+function presentationViewCtrl($meteor, socket, stBlurredDialog) {
   this.isCurrent = 0;
   this.gifs = $meteor.collection(GifList).subscribe('gifList');
+  this.open = true;
   this.prev = function () {
-    this.isCurrent -= 1;
+    if (this.isCurrent > 0) {
+      this.isCurrent -= 1;
+    }
   };
   this.next = function () {
-    this.isCurrent += 1;
+    if (this.isCurrent === this.gifs.length) {
+      this.isCurrent += 1;
+    }
   };
   this.stop = function () {
-    toggleOverlay();
+    stBlurredDialog.open();
   };
   this.events = $meteor.subscribe('events', {
     msg: function (data) {
@@ -46,42 +51,3 @@ function presentationView() {
     controllerAs: 'vm'
   };
 }
-
-var triggerBttn = document.getElementById( 'trigger-overlay' ),
-  overlay = document.querySelector( 'div.overlay' ),
-  closeBttn = overlay.querySelector( 'button.overlay-close' );
-transEndEventNames = {
-  'WebkitTransition': 'webkitTransitionEnd',
-  'MozTransition': 'transitionend',
-  'OTransition': 'oTransitionEnd',
-  'msTransition': 'MSTransitionEnd',
-  'transition': 'transitionend'
-},
-  transEndEventName = transEndEventNames[ Modernizr.prefixed( 'transition' ) ],
-  support = { transitions : Modernizr.csstransitions };
-
-function toggleOverlay() {
-  if( classie.has( overlay, 'open' ) ) {
-    classie.remove( overlay, 'open' );
-    classie.add( overlay, 'close' );
-    var onEndTransitionFn = function( ev ) {
-      if( support.transitions ) {
-        if( ev.propertyName !== 'visibility' ) return;
-        this.removeEventListener( transEndEventName, onEndTransitionFn );
-      }
-      classie.remove( overlay, 'close' );
-    };
-    if( support.transitions ) {
-      overlay.addEventListener( transEndEventName, onEndTransitionFn );
-    }
-    else {
-      onEndTransitionFn();
-    }
-  }
-  else if( !classie.has( overlay, 'close' ) ) {
-    classie.add( overlay, 'open' );
-  }
-}
-
-triggerBttn.addEventListener( 'click', toggleOverlay );
-closeBttn.addEventListener( 'click', toggleOverlay );

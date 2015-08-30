@@ -1,4 +1,4 @@
-<section class="rt">
+<section class="rt" st-blurred-region>
   <!-- view modal -->
   <button class="btn btn-primary btn-modal"
           data-toggle="modal"
@@ -48,11 +48,8 @@
                   data-dismiss="modal">
             close
           </button>
-          <button class="btn btn-default" ng-click="vm.clear()">
+          <button class="btn btn-default" ng-click="vm.stop()">
             Stop
-          </button>
-          <button class="btn btn-primary" ng-click="vm.exit()">
-            Exit
           </button>
         </div>
         <!-- footer -->
@@ -65,4 +62,5 @@
 
   </div>
   <!-- modal -->
+  <st-blurred-dialog-overlay></st-blurred-dialog-overlay>
 </section>

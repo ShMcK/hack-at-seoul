@@ -1,6 +1,4 @@
-<div class="giphy-image col-md-6" >
-  <img ng-src="{{gif.url}}" ng-click="vm.select(gif)"
+<div class="giphy-image col-md-6">
+  <img ng-src="{{gif.url}}" ng-click="vm.select(gif)" ng-class="{selected-image: this.selectedUrl == gif.url}"
        ng-style="{'width':gif.width, 'height':gif.height, 'frameBorder':'0'}">
-
-  <p ng-if="index">{{index}}</p>
 </div>

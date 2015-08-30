@@ -6,13 +6,13 @@ Meteor.call('removeAllGifs');
 Meteor.call('removeAllRTQueries');
 
 
-
 /**
  *  App Module
  */
 angular.module('app', [
   /* third party */
-  'angular-meteor'
+  'angular-meteor',
+  'stBlurredDialog'
 ]);
 
 /**

@@ -1,6 +1,6 @@
 angular.module('app').directive('rtPresentationView', rtPresentationView);
 
-function rtPresentationViewCtrl($meteor, socket) {
+function rtPresentationViewCtrl($meteor, socket, stBlurredDialog) {
 
   console.log(socket);
 
@@ -30,9 +30,13 @@ function rtPresentationViewCtrl($meteor, socket) {
   $meteor.subscribe('rtGif');
   var vm = this;
   vm.gifs = $meteor.collection(RTGif, true);
-  vm.clear = function () {
+  vm.exit = function () {
     Meteor.call('removeAllRTQueries');
   };
+
+  vm.stop = function () {
+    stBlurredDialog.open();
+  }
 
 }
 

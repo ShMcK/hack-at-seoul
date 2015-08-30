@@ -1,5 +1,5 @@
-<section class="presentation-view">
-  <div class="container text-center">
+<section class="presentation-view" >
+  <div class="container text-center" st-blurred-dialog-region>
     <h2>Presentation</h2>
     <!-- Large modal -->
     <button class="btn btn-default" data-toggle="modal" data-target=".bs-example-modal-lg">Start</button>
@@ -8,7 +8,7 @@
          aria-hidden="true">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
-          <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="1000">
+          <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="999999">
 
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
@@ -35,7 +35,7 @@
                   data-dismiss="modal">
             close
           </button>
-          <button class="btn btn-default" ng-click="vm.clear()">
+          <button class="btn btn-default" ng-click="vm.stop()">
             Stop
           </button>
         </div>
@@ -43,8 +43,5 @@
       </div>
     </div>
   </div>
-
+  <st-blurred-dialog-overlay></st-blurred-dialog-overlay>
 </section>
-<div class="overlay overlay-hugeinc">
-  <button type="button" class="overlay-close">Close</button>
-</div>

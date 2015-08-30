@@ -8,8 +8,13 @@ function giphyImage() {
       query: '='
     },
     controller: function (SlideService, $scope) {
+      this.selectedUrl = null;
       this.select = function (gif) {
-        SlideService.addSlide(gif, $scope.query)
+        SlideService.addSlide(gif, $scope.query);
+        this.selectedUrl = gif.url;
+      };
+      this.isSelected = function (gif) {
+        return gif.url == this.selectedUrl;
       }
     }
   };
