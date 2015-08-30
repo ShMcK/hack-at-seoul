@@ -5,7 +5,7 @@ var settings = {
   size: 'original', // {string} [fixed, downsized, original]
   useRating: false,
   rating: 'pg-13', // {string} [y, g, pg, pg-13, r]
-  useTheme: true,
+  useTheme: false,
   theme: ''
 };
 

@@ -1,5 +1,5 @@
 <div class="container">
-  <h2>Select Presentation Type</h2>
+  <h2>Presentation Type</h2>
 
   <div class="row form-group product-chooser">
 
@@ -28,4 +28,32 @@
       </div>
     </div>
   </div>
+
+  <br>
+
+  <h2>Theme</h2>
+  <form name="theme" ng-submit="p.selectTheme()">
+    <label>
+      <input type="radio" ng-model="p.theme" value="">
+      None
+    </label><br/>
+    <label>
+      <input type="radio" ng-model="p.theme" value="The Simpsons">
+      The Simpsons
+    </label><br/>
+    <label>
+      <input type="radio" ng-model="p.theme" value="Anime">
+      Anime
+    </label><br/>
+    <label>
+      <input type="radio" ng-model="p.theme" value="Animals">
+      Animals
+    </label><br/>
+    <label>
+      <input type="radio" ng-model="p.theme" value="reactions">
+      Reactions
+    </label>
+    <button type="submit" class="btn btn-secondary">Choose Theme</button>
+  </form>
+
 </div>

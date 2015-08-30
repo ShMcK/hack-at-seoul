@@ -3,6 +3,10 @@ function presentationTypeCtrl(SettingsService) {
   vm.settings = SettingsService;
   vm.select = function (type) {
     SettingsService.presentationType = type;
+  };
+  vm.theme = '';
+  vm.selectTheme = function() {
+    Meteor.call('setSettings', {useTheme: true, theme: vm.theme});
   }
 }
 
