@@ -4,6 +4,9 @@ Meteor.startup(function() {
     removeAllQueries: function() {
       console.log('clear rt');
       return Query.remove({});
+    },
+    newQuery: function (queryWord) {
+      Query.insert({query: queryWord});
     }
   });
 });
