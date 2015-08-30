@@ -9,7 +9,6 @@ insecure
 autopublish
 urigo:angular
 twbs:bootstrap
-mquandalle:bower
 joncursi:socket-io-client
 matb33:collection-hooks
 http
