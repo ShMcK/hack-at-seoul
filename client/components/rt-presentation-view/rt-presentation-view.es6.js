@@ -1,8 +1,12 @@
 angular.module('app').directive('rtPresentationView', rtPresentationView);
 
 function rtPresentationViewCtrl($meteor) {
+  $meteor.subscribe('rtGif');
   var vm = this;
-  vm.gifs = $meteor.collection(RTGif, true).subscribe('rtGif');
+  vm.gifs = $meteor.collection(RTGif, true);
+  vm.clear = function () {
+    Meteor.call('removeAllRTQueries');
+  }
 }
 
 function rtPresentationView() {

@@ -3,6 +3,7 @@
 Meteor.call('removeAllEvents');
 Meteor.call('removeAllQueries');
 Meteor.call('removeAllGifs');
+Meteor.call('removeAllRTQueries');
 
 /**
  *  App Module
